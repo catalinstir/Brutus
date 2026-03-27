@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/core/math_opps.o: src/core/math_opps.cpp.o
+.PHONY : src/core/math_opps.o
+
+# target to build an object file
+src/core/math_opps.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/core/math_opps.cpp.o
+.PHONY : src/core/math_opps.cpp.o
+
+src/core/math_opps.i: src/core/math_opps.cpp.i
+.PHONY : src/core/math_opps.i
+
+# target to preprocess a source file
+src/core/math_opps.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/core/math_opps.cpp.i
+.PHONY : src/core/math_opps.cpp.i
+
+src/core/math_opps.s: src/core/math_opps.cpp.s
+.PHONY : src/core/math_opps.s
+
+# target to generate assembly for a file
+src/core/math_opps.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/core/math_opps.cpp.s
+.PHONY : src/core/math_opps.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... src/core/math_opps.o"
+	@echo "... src/core/math_opps.i"
+	@echo "... src/core/math_opps.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -3,7 +3,8 @@ project(main)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(include)
+include_directories(src)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 

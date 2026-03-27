@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/catalinux/Projects/Brutus/include
+CXX_INCLUDES = -I/home/catalinux/Projects/Brutus/src
 
 CXX_FLAGS = -std=gnu++17
 

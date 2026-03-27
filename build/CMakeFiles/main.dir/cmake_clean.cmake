@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/link.d"
+  "CMakeFiles/main.dir/src/core/math_opps.cpp.o"
+  "CMakeFiles/main.dir/src/core/math_opps.cpp.o.d"
   "CMakeFiles/main.dir/src/main.cpp.o"
   "CMakeFiles/main.dir/src/main.cpp.o.d"
   "main"

@@ -1,0 +1,160 @@
+# Modern C++ clang-format configuration
+# Targets C++20, based on LLVM style with modern conventions
+
+Language:        Cpp
+Standard:        c++20
+
+# Base style
+BasedOnStyle:    LLVM
+
+# Indentation
+IndentWidth:                  4
+TabWidth:                     4
+UseTab:                       Never
+ContinuationIndentWidth:      4
+IndentCaseLabels:             true
+IndentCaseBlocks:             false
+IndentPPDirectives:           BeforeHash
+IndentRequiresClause:         true
+IndentWrappedFunctionNames:   false
+NamespaceIndentation:         None
+LambdaBodyIndentation:        Signature
+
+# Braces
+BreakBeforeBraces:            Attach
+BraceWrapping:
+  AfterCaseLabel:             false
+  AfterClass:                 false
+  AfterControlStatement:      Never
+  AfterEnum:                  false
+  AfterFunction:              false
+  AfterNamespace:             false
+  AfterStruct:                false
+  AfterUnion:                 false
+  AfterExternBlock:           false
+  BeforeCatch:                false
+  BeforeElse:                 false
+  BeforeLambdaBody:           false
+  BeforeWhile:                false
+  IndentBraces:               false
+  SplitEmptyFunction:         false
+  SplitEmptyRecord:           false
+  SplitEmptyNamespace:        false
+
+# Line length & breaking
+ColumnLimit:                        100
+ReflowComments:                     true
+BreakBeforeBinaryOperators:         NonAssignment
+BreakBeforeTernaryOperators:        true
+BreakConstructorInitializers:       BeforeColon
+BreakInheritanceList:               BeforeColon
+BreakStringLiterals:                true
+BreakTemplateDeclarations:          Yes
+AlwaysBreakAfterReturnType:         None
+AlwaysBreakBeforeMultilineStrings:  false
+PackConstructorInitializers:        BinPack
+
+# Alignment
+AlignAfterOpenBracket:          Align
+AlignArrayOfStructures:         Right
+AlignConsecutiveAssignments:    None
+AlignConsecutiveBitFields:      None
+AlignConsecutiveDeclarations:   None
+AlignConsecutiveMacros:         None
+AlignEscapedNewlines:           Right
+AlignOperands:                  Align
+AlignTrailingComments:
+  Kind:     Always
+  OverEmptyLines: 1
+
+# Spaces
+SpaceAfterCStyleCast:               false
+SpaceAfterLogicalNot:               false
+SpaceAfterTemplateKeyword:          false
+SpaceAroundPointerQualifiers:       Default
+SpaceBeforeAssignmentOperators:     true
+SpaceBeforeCaseColon:               false
+SpaceBeforeCpp11BracedList:         false
+SpaceBeforeCtorInitializerColon:    true
+SpaceBeforeInheritanceColon:        true
+SpaceBeforeParens:                  ControlStatements
+SpaceBeforeRangeBasedForLoopColon:  true
+SpaceBeforeSquareBrackets:          false
+SpaceInEmptyBlock:                  false
+SpaceInEmptyParentheses:            false
+SpacesBeforeTrailingComments:       2
+SpacesInAngles:                     Never
+SpacesInCStyleCastParentheses:      false
+SpacesInConditionalStatement:       false
+SpacesInContainerLiterals:          false
+SpacesInParentheses:                false
+SpacesInSquareBrackets:             false
+
+# Pointer & reference alignment
+PointerAlignment:       Left
+ReferenceAlignment:     Left
+DerivePointerAlignment: false
+
+# Includes
+SortIncludes:             CaseSensitive
+IncludeBlocks:            Regroup
+IncludeCategories:
+  # Main header (paired .h for a .cpp)
+  - Regex:           '^".*"'
+    Priority:        1
+    SortPriority:    1
+  # C system headers
+  - Regex:           '^<c(assert|complex|ctype|errno|fenv|float|inttypes|iso646|limits|locale|math|setjmp|signal|stdalign|stdarg|stdbool|stddef|stdint|stdio|stdlib|string|tgmath|time|uchar|wchar|wctype)>$'
+    Priority:        2
+    SortPriority:    2
+  # C++ standard library
+  - Regex:           '^<[a-z_]+>'
+    Priority:        3
+    SortPriority:    3
+  # Everything else (third-party, OS headers)
+  - Regex:           '.*'
+    Priority:        4
+    SortPriority:    4
+
+# Functions & arguments
+AllowAllArgumentsOnNextLine:              true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine:            Empty
+AllowShortCaseLabelsOnASingleLine:        false
+AllowShortEnumsOnASingleLine:             false
+AllowShortFunctionsOnASingleLine:         Inline
+AllowShortIfStatementsOnASingleLine:      Never
+AllowShortLambdasOnASingleLine:           All
+AllowShortLoopsOnASingleLine:             false
+BinPackArguments:                         false
+BinPackParameters:                        false
+
+# Classes & structs
+EmptyLineAfterAccessModifier:     Never
+EmptyLineBeforeAccessModifier:    LogicalBlock
+SeparateDefinitionBlocks:         Leave
+
+# Modern C++ specifics
+RequiresClausePosition:           OwnLine
+RequiresExpressionIndentation:    OuterScope
+InsertTrailingCommas:             Wrapped
+
+# Penalties (tune line-break decisions)
+PenaltyBreakAssignment:               10
+PenaltyBreakBeforeFirstCallParameter: 30
+PenaltyBreakComment:                  300
+PenaltyBreakFirstLessLess:            120
+PenaltyBreakOpenParenthesis:          0
+PenaltyBreakString:                   1000
+PenaltyBreakTemplateDeclaration:      10
+PenaltyExcessCharacter:               1000000
+PenaltyIndentedWhitespace:            0
+PenaltyReturnTypeOnItsOwnLine:        200
+
+# Misc
+Cpp11BracedListStyle:       true
+FixNamespaceComments:       true
+MaxEmptyLinesToKeep:        1
+RemoveBracesLLVM:           false
+ShortNamespaceLines:        1
+SortUsingDeclarations:      true

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/catalinux/Projects/Brutus/build",
+  "command": "/usr/bin/c++  -I/home/catalinux/Projects/Brutus/src -std=gnu++17 -o CMakeFiles/main.dir/src/core/math_opps.cpp.o -c /home/catalinux/Projects/Brutus/src/core/math_opps.cpp",
+  "file": "/home/catalinux/Projects/Brutus/src/core/math_opps.cpp",
+  "output": "CMakeFiles/main.dir/src/core/math_opps.cpp.o"
+},
+{
+  "directory": "/home/catalinux/Projects/Brutus/build",
+  "command": "/usr/bin/c++  -I/home/catalinux/Projects/Brutus/src -std=gnu++17 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/catalinux/Projects/Brutus/src/main.cpp",
+  "file": "/home/catalinux/Projects/Brutus/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.o"
+}
+]

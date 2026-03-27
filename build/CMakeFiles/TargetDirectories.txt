@@ -1,0 +1,3 @@
+/home/catalinux/Projects/Brutus/build/CMakeFiles/main.dir
+/home/catalinux/Projects/Brutus/build/CMakeFiles/edit_cache.dir
+/home/catalinux/Projects/Brutus/build/CMakeFiles/rebuild_cache.dir
